@@ -1,0 +1,4 @@
+co\edu\udistrital\rpgmanager\controlador\PersonajeControlador.class
+co\edu\udistrital\rpgmanager\modelo\Personaje.class
+co\edu\udistrital\rpgmanager\repositorio\PersonajeRepositorio.class
+co\edu\udistrital\rpgmanager\RpgManager.class
