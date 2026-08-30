@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RPG Manager - Personajes</title>
+</head>
+<body>
+    <h1>Lista de Personajes</h1>
+    
+    <h2>Agregar Personaje</h2>
+    <form action="/personajes" method="POST">
+        <label>Nombre: <input type="text" name="nombre" required></label><br>
+        <label>Tipo: <input type="text" name="tipo" required></label><br>
+        <label>Nivel: <input type="number" name="nivel" min="1" required></label><br>
+        <button type="submit">Guardar Personaje</button>
+    </form>
+
+    <table id="tabla-personajes">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Nivel</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+    fetch('/personajes')
+        .then(response => response.json())
+        .then(personajes => {
+            const tbody = document.querySelector('#tabla-personajes tbody');
+                tbody.innerHTML = '';
+
+                personajes.forEach(p => {
+                    tbody.innerHTML += `
+                        <tr>
+                            <td>${p.nombre}</td>
+                            <td>${p.tipo}</td>
+                            <td>${p.nivel}</td>
+                        </tr>
+                    `;
+                });
+            });
+    </script>
+</body>
+</html>

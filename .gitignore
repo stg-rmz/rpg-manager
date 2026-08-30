@@ -1,0 +1,6 @@
+*.class
+.settings/
+target/
+*.class
+.settings/
+.nb-workspace
