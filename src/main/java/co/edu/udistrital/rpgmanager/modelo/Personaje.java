@@ -9,7 +9,7 @@ public class Personaje {
     public Personaje(String nombre, String tipo, int nivel, int vida) {
         this.nombre = nombre;
         this.tipo = tipo;
-        setNivel(nivel);
+        this.nivel=nivel;
         this.vida = vida;
     }
     
